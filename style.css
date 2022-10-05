@@ -1,0 +1,273 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  padding-top: 4px;
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+.header-top {
+  margin: 10px 10px 0 22px;
+  padding: 8px 10px;
+  border: 1px solid #eee;
+  border-radius: 50px;
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  /* min-width: 300px; */
+  max-width: 743px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.search-area {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.search-icon {
+  min-width: 40px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.text-area {
+  display: block;
+  width: 100%;
+}
+
+.text-area h3 {
+  font-size: 15px;
+}
+
+.text-area .any-text {
+  display: flex;
+  color: #5a5a5a;
+  width: 90%;
+  text-overflow: ellipsis;
+}
+
+.text-area .any-text p {
+  font-size: 13px;
+  width: auto;
+  margin-right: 2px;
+  color: #5a5a5a;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+}
+
+.text-area h3,
+.text-area .any-text p {
+  margin: 0;
+}
+
+.filter {
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.header-bottom {
+  /* content: ''; */
+  position: relative;
+  padding: 10px;
+  margin-top: 16px;
+  /* background-color: red; */
+  /* padding-top: 100px 0; */
+}
+
+.header-slider {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  height: 60px;
+  width: 98%;
+  overflow: scroll;
+
+}
+
+.header-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.header-slider-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200%;
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  /* gap: 5px; */
+  transition: 0s ease-in;
+  border-bottom: 2px solid #eee;
+  background-color: #fff;
+}
+
+.header-slider-inner .element-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  /* background-color: yellow; */
+  padding: 0 9px 5px 9px;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  color: #000;
+  font-weight: bold;
+  opacity: .7;
+}
+
+.header-slider-inner .element-card.first {
+  margin-left: 9px;
+}
+
+.element-card .img {
+  height: 24px;
+  aspect-ratio: 1/1;
+}
+
+.element-card .img img {
+  height: 100%;
+  width: 100%;
+}
+
+.element-card p {
+  margin: 0;
+  padding: 5px 1px 14px 0;
+}
+
+
+.element-card.active,
+.element-card.active p {
+  opacity: 1;
+  border-bottom: 2px solid #000;
+}
+
+.main-section {
+  margin-top: 168px;
+}
+
+.main-card {
+  /* width: 90%; */
+  /* background-color: yellow; */
+  margin: 0 24px 33px 24px;
+}
+
+.slide-show {
+  position: relative;
+  font-size: 20px;
+}
+
+.slide-show .image {
+  height: 50%;
+
+}
+
+.slide-show .image img {
+  border-radius: 20px;
+  width: 100%;
+  aspect-ratio: 1/.95;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-show .heart {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+
+.main-card-elements {
+  padding-top: 8px;
+}
+
+.name-and-rating {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 4px;
+  font-size: 13px;
+}
+
+.name-and-rating i {
+  font-size: 13px;
+}
+
+.name-and-rating p {
+  font-size: 15px;
+}
+
+.other-details p {
+  padding-bottom: 2px;
+  font-size: 15px;
+  color: #707070;
+}
+
+.other-details .amount {
+  display: flex;
+  align-items: baseline;
+  padding: 8px 0;
+  font-size: 13px;
+}
+
+.other-details .amount span {
+  font-size: 15px;
+}
+
+.last-element {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  /* border-top: 1px solid black; */
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 3px 30px;
+  z-index: 2;
+}
+
+.last-element .element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 5px 0 5px;
+  font-size: 10px;
+}
+
+.last-element .element svg {
+  width: 24px !important;
+}
+
+.last-element .element p {
+  padding: 5px 9px;
+  font-weight: 500;
+}
+
+.last-element .element.active svg {
+  color: #ff0037;
+}
+
+footer {
+  margin-bottom: 100px;
+}
