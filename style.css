@@ -184,6 +184,7 @@ header {
   display: flex;
   transform: translateX(0);
   transition: transform 0.5s ease-in-out;
+  position: relative;
 
 }
 
@@ -197,9 +198,28 @@ header {
 
 .slide-show .heart {
   position: absolute;
-  top: 38px;
+  top: 18px;
   right: 18px;
   z-index: 2;
+}
+
+
+.slide-show .rightbtn,
+.slide-show .leftbtn {
+  position: absolute;
+  z-index: 2;
+  top: 30%;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 50%;
+  font-weight: bold;
+  /* left: 18px; */
+  margin-left: 18px;
+  display: none;
+}
+
+.slide-show .rightbtn {
+  right: 18px;
 }
 
 .main-card-elements {
@@ -225,6 +245,9 @@ header {
   padding-bottom: 2px;
   font-size: 15px;
   color: #707070;
+  text-overflow: ellipsis;
+  max-width: 20px;
+  white-space: nowrap;
 }
 
 .other-details .amount {

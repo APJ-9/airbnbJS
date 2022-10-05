@@ -36,21 +36,57 @@ function createCard(element) {
     slideShow.classList.add('images')
 
     const rightBtn = document.createElement('button')
-    rightBtn.classList.add('btn')
+    rightBtn.classList.add('rightbtn')
     rightBtn.innerText = '>'
 
     const leftBtn = document.createElement('button')
-    leftBtn.classList.add('btn')
+    leftBtn.classList.add('leftbtn')
     leftBtn.innerText = '<'
 
+    let index = 0
 
-    rightBtn.addEventListener('click', () => {
-        console.log(element.images)
+    window.addEventListener('resize', () => {
+        index = 0
+        slideShow.style.transform = `translateX(${-index * slideShow.offsetWidth}px)`
+
     })
 
     leftBtn.addEventListener('click', () => {
-        console.log(element.name)
+        index--
+        if (index > 0) {
+            slideShow.style.transform = `translateX(${-index * slideShow.offsetWidth}px)`
+        } else {
+            index = 0
+            slideShow.style.transform = `translateX(${-index * slideShow.offsetWidth}px)`
+        }
+        // console.log(index)
     })
+
+    rightBtn.addEventListener('click', () => {
+        index++
+        if (index < allImages.length) {
+
+            slideShow.style.transform = `translateX(${-index * slideShow.offsetWidth}px)`
+        } else {
+            index = allImages.length - 1
+        }
+        // console.log(index)
+    })
+
+    slideShowContainer.addEventListener('mouseenter', () => {
+        // if (index === 0) {
+        leftBtn.style.display = 'block'
+        rightBtn.style.display = 'block'
+        // } 
+        // leftBtn.style.display = 'block'
+
+    })
+    slideShowContainer.addEventListener('mouseleave', () => {
+        leftBtn.style.display = 'none'
+        rightBtn.style.display = 'none'
+    })
+
+
     const heart = document.createElement('div')
     heart.classList.add('heart')
     heart.innerHTML =
@@ -71,8 +107,8 @@ function createCard(element) {
         <div class="amount">
             <h3>&#8377;${element.price}</h3>
             <span>&nbsp;${element.day}
-        div>
-    div>
+        </div>
+    </div>
     `
 
     card.appendChild(slideShowContainer)
