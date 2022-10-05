@@ -41,6 +41,27 @@
                 "images/a9.jpg",
                 "images/a10.jpg"
             ]
+        },
+        {
+            "name": "Paklok A. Thalang, Thailand",
+            "rating": "5.0",
+            "address": "Sirinat National Park",
+            "distance": "4549",
+            "date": "21-26 Nov",
+            "price": "139206",
+            "day": "night",
+            "images": [
+                "images/a8.jpg",
+                "images/a10.jpg",
+                "images/a4.jpeg",
+                "images/a3.jpg",
+                "images/a5.jpg",
+                "images/a7.jpg",
+                "images/a6.jpg",
+                "images/a2.jpg",
+                "images/a9.jpg",
+                "images/a1.jpeg"
+            ]
         }
     ]
 }

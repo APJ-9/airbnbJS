@@ -16,7 +16,7 @@ header {
   top: 0;
   left: 0;
   background-color: white;
-  z-index: 1;
+  z-index: 13;
 }
 
 .header-top {
@@ -101,6 +101,7 @@ header {
   height: 60px;
   width: 98%;
   overflow: scroll;
+  z-index: 3;
 
 }
 
@@ -120,6 +121,8 @@ header {
   transition: 0s ease-in;
   border-bottom: 2px solid #eee;
   background-color: #fff;
+  z-index: 3;
+
 }
 
 .header-slider-inner .element-card {
@@ -200,14 +203,14 @@ header {
   position: absolute;
   top: 18px;
   right: 18px;
-  z-index: 2;
+  z-index: 1;
 }
 
 
 .slide-show .rightbtn,
 .slide-show .leftbtn {
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   top: 30%;
   padding: 10px 14px;
   border: none;
@@ -298,4 +301,11 @@ header {
 
 footer {
   margin-bottom: 100px;
+}
+
+@media (min-width:550px) {
+  .main-section-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
