@@ -8,16 +8,18 @@
             "date": "8-13 Oct",
             "price": "26099",
             "day": "night",
-            "img1": "images/a1.jpeg",
-            "img2": "images/a2.jpg",
-            "img3": "images/a3.jpg",
-            "img4": "images/a4.jpeg",
-            "img5": "images/a5.jpg",
-            "img6": "images/a6.jpg",
-            "img7": "images/a7.jpg",
-            "img8": "images/a8.jpg",
-            "img9": "images/a9.jpg",
-            "img10": "images/a10.jpg"
+            "images": [
+                "images/a1.jpeg",
+                "images/a2.jpg",
+                "images/a3.jpg",
+                "images/a4.jpeg",
+                "images/a5.jpg",
+                "images/a6.jpg",
+                "images/a7.jpg",
+                "images/a8.jpg",
+                "images/a9.jpg",
+                "images/a10.jpg"
+            ]
         },
         {
             "name": "Paklok A. Thalang, Thailand",
@@ -27,16 +29,18 @@
             "date": "21-26 Nov",
             "price": "139206",
             "day": "night",
-            "img1": "images/a1.jpeg",
-            "img2": "images/a2.jpg",
-            "img3": "images/a3.jpg",
-            "img4": "images/a4.jpeg",
-            "img5": "images/a5.jpg",
-            "img6": "images/a6.jpg",
-            "img7": "images/a7.jpg",
-            "img8": "images/a8.jpg",
-            "img9": "images/a9.jpg",
-            "img10": "images/a10.jpg"
+            "images": [
+                "images/a2.jpg",
+                "images/a1.jpeg",
+                "images/a4.jpeg",
+                "images/a3.jpg",
+                "images/a5.jpg",
+                "images/a7.jpg",
+                "images/a6.jpg",
+                "images/a8.jpg",
+                "images/a9.jpg",
+                "images/a10.jpg"
+            ]
         }
     ]
 }

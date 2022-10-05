@@ -176,14 +176,18 @@ header {
 .slide-show {
   position: relative;
   font-size: 20px;
+  overflow: hidden;
 }
 
-.slide-show .image {
-  height: 50%;
+.slide-show .images {
+  /* height: 50%; */
+  display: flex;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
 
 }
 
-.slide-show .image img {
+.slide-show .images img {
   border-radius: 20px;
   width: 100%;
   aspect-ratio: 1/.95;
@@ -193,8 +197,9 @@ header {
 
 .slide-show .heart {
   position: absolute;
-  top: 18px;
+  top: 38px;
   right: 18px;
+  z-index: 2;
 }
 
 .main-card-elements {
