@@ -1,16 +1,22 @@
 * {
   box-sizing: border-box;
+  margin: 0;
   font-family: sans-serif;
 }
 
 body {
   padding: 0;
-  margin: 0;
 }
 
 header {
   width: 100%;
-  margin-top: 14px;
+  padding-top: 4px;
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 1;
 }
 
 .header-top {
@@ -80,7 +86,7 @@ header {
 }
 
 .header-bottom {
-  content: '';
+  /* content: ''; */
   position: relative;
   padding: 10px;
   margin-top: 16px;
@@ -113,6 +119,7 @@ header {
   /* gap: 5px; */
   transition: 0s ease-in;
   border-bottom: 2px solid #eee;
+  background-color: #fff;
 }
 
 .header-slider-inner .element-card {
@@ -154,4 +161,113 @@ header {
 .element-card.active p {
   opacity: 1;
   border-bottom: 2px solid #000;
+}
+
+.main-section {
+  margin-top: 168px;
+}
+
+.main-card {
+  /* width: 90%; */
+  /* background-color: yellow; */
+  margin: 0 24px 33px 24px;
+}
+
+.slide-show {
+  position: relative;
+  font-size: 20px;
+}
+
+.slide-show .image {
+  height: 50%;
+
+}
+
+.slide-show .image img {
+  border-radius: 20px;
+  width: 100%;
+  aspect-ratio: 1/.95;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-show .heart {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+
+.main-card-elements {
+  padding-top: 8px;
+}
+
+.name-and-rating {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 4px;
+  font-size: 13px;
+}
+
+.name-and-rating i {
+  font-size: 13px;
+}
+
+.name-and-rating p {
+  font-size: 15px;
+}
+
+.other-details p {
+  padding-bottom: 2px;
+  font-size: 15px;
+  color: #707070;
+}
+
+.other-details .amount {
+  display: flex;
+  align-items: baseline;
+  padding: 8px 0;
+  font-size: 13px;
+}
+
+.other-details .amount span {
+  font-size: 15px;
+}
+
+.last-element {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  /* border-top: 1px solid black; */
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 3px 30px;
+  z-index: 2;
+}
+
+.last-element .element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 5px 0 5px;
+  font-size: 10px;
+}
+
+.last-element .element svg {
+  width: 24px !important;
+}
+
+.last-element .element p {
+  padding: 5px 9px;
+  font-weight: 500;
+}
+
+.last-element .element.active svg {
+  color: #ff0037;
+}
+
+footer {
+  margin-bottom: 100px;
 }
